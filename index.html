@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive pricing component | Frontend Mentor Challenge</title>
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"  />
+</head>
+<body>
+    <main>
+        <h1 class="heading">
+            <span class="heading--main">Simple, traffic-based pricing</span>
+            <span class="heading--sub">Sign-up for our 30-day trial. No credit card required.</span>
+        </h1>
+        <div class="pricing-container">
+            <div class="slider-box">
+                <h2 class="page-views">100k PAGEVIEWS</h2>
+                <div class="slider">
+                    <input class="slider-bar" type="range" min="0" max="5"/>
+                </div>
+                <span class="price">&dollar;16.00<span class="month"> /month</span></span>
+            </div>
+            <div class="options-box">
+                <label class="checkbox-label" for="billing">Monthly Billing
+                    <input type="checkbox" id="billing">
+                    <span class="custom-checkbox"></span>
+                    Yearly Billing
+                </label>
+                <span class="discount">-25% <span class="disc-word">discount</span></span>
+            </div>
+            <div class="features-container">
+                <div class="features-box">
+                    <div class="feature">
+                        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+                        <span class="feature-name">Unlimited websites</span>
+                    </div>
+                    <div class="feature">
+                        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+                        <span class="feature-name">100% data ownership</span>
+                    </div>
+                    <div class="feature">
+                        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+                        <span class="feature-name">Email reports</span>
+                    </div>
+                </div>
+                <button class="cta">Start my trial</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="copyright">2021&copy; <a href="https://github.com/yasertarek/" class="author" target="_blank">Yasser Tarek</a></p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
