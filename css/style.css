@@ -78,6 +78,9 @@ body{
 }
 .slider-bar{
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
     width: 100%;
     height: 100%;
     border-radius: 100rem;  
@@ -85,7 +88,23 @@ body{
     position: relative;
     background: transparent;
 }
-.slider-bar::-webkit-slider-thumb {
+.slider-bar::-ms-thumb{
+    -ms-appearance: none; /* Override default look */
+    appearance: none;
+    width: 4.5rem; /* Set a specific slider handle width */
+    height: 4.5rem; /* Slider handle height */
+    background: url(../images/icon-slider.svg), hsl(174, 86%, 45%); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    box-shadow: 5px 10px 20px 5px hsl(174, 77%, 80%);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 65%;
+    transition: all 0.2s ease-in-out;
+    margin-top: -1.5rem;
+    border: none;
+}
+.slider-bar::-webkit-slider-thumb{
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 4.5rem; /* Set a specific slider handle width */
@@ -99,12 +118,39 @@ body{
     background-size: 65%;
     transition: all 0.2s ease-in-out;
     margin-top: -1.5rem;
+    border: none;
 }
-.slider-bar::-webkit-slider-thumb:hover{
+.slider-bar::-moz-range-thumb{
+    -webkit-appearance: none; /* Override default look */
+    -moz-appearance: none; /* Override default look */
+    -ms-appearance: none; /* Override default look */
+    appearance: none;
+    width: 4.5rem; /* Set a specific slider handle width */
+    height: 4.5rem; /* Slider handle height */
+    background: url(../images/icon-slider.svg), hsl(174, 86%, 45%); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    box-shadow: 5px 10px 20px 5px hsl(174, 77%, 80%);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 65%;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    transform: translateY(-1rem);
+}
+.slider-bar::-ms-thumb, 
+.slider-bar::-webkit-slider-thumb:hover,
+.slider-bar::-moz-range-thumb:hover{
     box-shadow: 5px 15px 35px 15px hsl(174, 77%, 80%);
 }
-.slider-bar::-webkit-slider-thumb:active{
+.slider-bar::-ms-thumb, 
+.slider-bar::-webkit-slider-thumb:active,
+.slider-bar::-moz-range-thumb:active{
     box-shadow: 2px 5px 25px 1px hsl(174, 77%, 80%);
+}
+.slider-bar:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
 }
 .price{
     font-size: 3rem;
